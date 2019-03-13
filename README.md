@@ -1,6 +1,12 @@
 # VisualRelationshipDetection
 Two paper results for Visual relationship detection. 
 
+This work is done by Caffe 1 with Python custom layer.
+
+The first paper : Visual Relationship Detection with Language prior and Softmax accepted in IPAS 2018
+The Second paper : Improving Visual Relationship Detection uisng Linguistic and Spatail Cues submmitted in ETRI Journal
+
+The urls for two papers will be open soon.
 
 **Predicate Predication**
 

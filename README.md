@@ -2,7 +2,7 @@
 Two paper results for Visual relationship detection. 
 
 
-Predicate Predication
+**Predicate Predication**
 
 | Model         | R@50,k=1      | R@50,k=70     | R@50,k=1,z    | R@50,k=70,z   |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -13,7 +13,7 @@ Predicate Predication
 | R-S           | 51.50         | -             | 14.60         | -             |
 | LS+SVW        | 55.16         | 88.88         | 21.38         | 64.50         |
 
-Spatial Vector Proof
+**Spatial Vector Proof**
 
 | Model         | R@50,k=1      | R@50,k=70     | R@50,k=1,z    | R@50,k=70,z   |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -22,7 +22,7 @@ Spatial Vector Proof
 | SVW           | 48.75         | 78.04         | 16.85         | 55.77         |
 | LS+SVW        | 55.16         | 88.88         | 21.38         | 64.50         |
 
-Spatial Module Proof
+**Spatial Module Proof**
 
 | Model         | R@50,k=1      | R@50,k=70     | R@50,k=1,z    | R@50,k=70,z   |
 | ------------- | ------------- | ------------- | ------------- | ------------- |

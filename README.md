@@ -4,7 +4,7 @@ Two paper results for Visual relationship detection.
 
 Predicate Predication
 | Model  | R@50,k=1 | R@50,k=70 | R@50,k=1,z | R@50,k=70,z |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
+| --- | --- | --- | --- | --- |
 | VRD  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |

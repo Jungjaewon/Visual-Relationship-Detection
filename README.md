@@ -1,4 +1,4 @@
-# Visual_Relationship_Detection
+# Visual Relationship Detection
 Two paper results for Visual relationship detection. 
 
 This work is done by Caffe 1 with Python custom layer.

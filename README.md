@@ -8,7 +8,7 @@ The Second paper : Improving Visual Relationship Detection uisng Linguistic and 
 
 The urls for two papers will be open soon.
 
-<div align="center"><img src="https://github.com/Jungjaewon/Visual-Relationship-Detection/blob/master/overview.png" width="500" align="center"></div>
+<div align="center"><img src="https://github.com/Jungjaewon/Visual-Relationship-Detection/blob/master/overview.png" width="600" ></div>
 
 **Predicate Predication**
 

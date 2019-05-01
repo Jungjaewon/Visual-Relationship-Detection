@@ -1,0 +1,84 @@
+layer {
+        name: "data"
+        type: "Python"
+	top: "pair_vector"
+	top: "labels"
+        include {
+                phase: TRAIN     
+        }         
+        python_param {                 
+                module: 'Data_module.module'              
+                layer: 'DataLayer'                 
+                param_str: '{"dataset": "/home/woodcook486/visual_relationships_experiment/dataset_vrd/dup_vrd_train.json", "batch_size": 5, "mode" : "L"}'
+        }         
+}                    
+layer {           
+        name: "data"                   
+        type: "Python"                
+	top: "pair_vector"
+	top: "labels"    
+        include { 
+                phase: TEST
+        }         
+        python_param {                 
+                module: 'Data_module.module'              
+                layer: 'DataLayer'
+                param_str: '{"dataset": "/home/woodcook486/visual_relationships_experiment/dataset_vrd/dup_vrd_test.json", "batch_size": 5, "mode" : "L"}'
+        }         
+}
+
+# Language module!!!
+layer {
+	name: "language_module"
+	type: "InnerProduct"
+	bottom: "pair_vector"
+	top: "language_fc"
+	param {
+		lr_mult: 1
+		decay_mult: 1
+	}
+	param {
+		lr_mult: 1
+		decay_mult: 1
+	}
+	inner_product_param {
+		num_output: 70
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+			value: 0
+		}
+	}
+}
+layer {
+  name: "final_loss"
+  type: "SoftmaxWithLoss"
+  bottom: "language_fc"
+  bottom: "labels"
+  top: "final_loss"
+  include {
+		phase: TEST
+	}
+}
+layer {
+  name: "final_loss"
+  type: "SoftmaxWithLoss"
+  bottom: "language_fc"
+  bottom: "labels"
+  top: "final_loss"
+  include {
+		phase: TRAIN
+	}
+}
+layer {
+  name: "final_accuracy"
+  type: "Accuracy"
+  bottom: "language_fc"
+  bottom: "labels"
+  top: "final_accuracy"
+  include {
+    phase: TEST
+  }
+}

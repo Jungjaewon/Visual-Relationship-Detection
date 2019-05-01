@@ -1,0 +1,72 @@
+input: "spatial"
+input_shape {
+	dim: 1
+	dim: 7
+}
+input: "pair_vector"
+input_shape {
+	dim: 1
+	dim: 600
+}
+input: "factor"
+input_shape{
+	dim: 1
+	dim: 70
+}
+
+# Language module!!!
+layer {
+  name: "concat"
+  type: "Concat"
+  bottom: "spatial"
+  bottom: "pair_vector"
+  top: "concat_language"
+  concat_param {
+    axis: 1
+  }
+}
+layer {
+	name: "language_module"
+	type: "InnerProduct"
+	bottom: "concat_language"
+	top: "language_fc"
+	param {
+		lr_mult: 1
+		decay_mult: 1
+	}
+	param {
+		lr_mult: 1
+		decay_mult: 1
+	}
+	inner_product_param {
+		num_output: 70
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+			value: 0
+		}
+	}
+}
+
+layer {
+  name: "Eltwise"
+  type: "Eltwise"
+  bottom: "language_fc"
+  bottom: "factor"
+  top: "language_fc"
+  eltwise_param {
+    operation: PROD
+  }
+}
+
+layer {
+  name: "softmax"
+  type: "Softmax"
+  bottom: "language_fc"
+  top: "pred"
+  include {
+		phase: TEST
+	}
+}

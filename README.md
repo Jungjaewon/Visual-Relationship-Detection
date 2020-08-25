@@ -45,6 +45,6 @@ The urls for two papers will be open soon.
 | T 0.4 *       | 54.77         | 82.42         | 23.09         | 58.51         |
 
 Visual Relationship Detection with Language prior and Softmax : https://arxiv.org/abs/1904.07798 <br>
-Improving Visual Relationship Detection using Linguistic and Spatial Cues : This paper is accepted to ETRI Jouranl and will be opened soon.
+Improving Visual Relationship Detection using Linguistic and Spatial Cues : https://onlinelibrary.wiley.com/doi/full/10.4218/etrij.2019-0093
 
 The evaluation code is not optimized. The task will be done as soon as possible.
